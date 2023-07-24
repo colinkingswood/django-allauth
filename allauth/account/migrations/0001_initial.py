@@ -11,7 +11,7 @@ UNIQUE_EMAIL = getattr(settings, "ACCOUNT_UNIQUE_EMAIL", True)
 
 class Migration(migrations.Migration):
     dependencies = [
-        migrations.swappable_dependency(settings.AUTH_USER_MODEL),
+        migrations.swappable_dependency(settings.ALLAUTH_USER_MODEL),
     ]
 
     operations = [
@@ -47,7 +47,7 @@ class Migration(migrations.Migration):
                     "user",
                     models.ForeignKey(
                         verbose_name="user",
-                        to=settings.AUTH_USER_MODEL,
+                        to=settings.ALLAUTH_USER_MODEL,
                         on_delete=models.CASCADE,
                     ),
                 ),
