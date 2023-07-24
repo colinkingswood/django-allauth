@@ -2,6 +2,8 @@
 Welcome to django-allauth!
 ==========================
 
+Note, this is my own fork, so I can use a different AUTH_USER_MODEL in our main project.
+
 .. image:: https://github.com/pennersr/django-allauth/actions/workflows/ci.yml/badge.svg
    :target: https://github.com/pennersr/django-allauth/actions
 
