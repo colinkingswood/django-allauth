@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
         if app_settings.SITES_ENABLED
         else []
         + [
-            migrations.swappable_dependency(settings.AUTH_USER_MODEL),
+            migrations.swappable_dependency(settings.ALLAUTH_USER_MODEL),
         ]
     )
 
@@ -68,7 +68,7 @@ class Migration(migrations.Migration):
                 (
                     "user",
                     models.ForeignKey(
-                        to=settings.AUTH_USER_MODEL, on_delete=models.CASCADE
+                        to=settings.ALLAUTH_USER_MODEL, on_delete=models.CASCADE
                     ),
                 ),
             ],
